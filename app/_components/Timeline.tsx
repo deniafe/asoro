@@ -17,14 +17,16 @@ const PaymentMilestones = () => {
   const paymentData = [
     {
       milestone: "Contract Signing",
-      payment: "₦25.0M (10%)",
+      // payment: "₦25.0M (10%)",
+      payment: " (10%)",
       timing: "Phase 1",
       deliverable: "Project kickoff, team assembly, and environment setup.",
       color: "blue",
     },
     {
       milestone: "System Architecture",
-      payment: "₦12.5M (5%)",
+      // payment: "₦12.5M (5%)",
+      payment: " (5%)",
       timing: "Phase 2",
       deliverable:
         "Database schema, API documentation, and cloud architecture.",
@@ -32,70 +34,80 @@ const PaymentMilestones = () => {
     },
     {
       milestone: "UI/UX Design",
-      payment: "₦12.5M (5%)",
+      // payment: "₦12.5M (5%)",
+      payment: " (5%)",
       timing: "Phase 3",
       deliverable: "High-fidelity wireframes and interactive prototypes.",
       color: "purple",
     },
     {
       milestone: "Backend Core",
-      payment: "₦25.0M (10%)",
+      // payment: "₦25.0M (10%)",
+      payment: " (10%)",
       timing: "Phase 4",
       deliverable: "Authentication, user management, and core API services.",
       color: "purple",
     },
     {
       milestone: "Mobile Core",
-      payment: "₦25.0M (10%)",
+      // payment: "₦25.0M (10%)",
+      payment: " (10%)",
       timing: "Phase 5",
       deliverable: "Base iOS and Android builds with core navigation.",
       color: "green",
     },
     {
       milestone: "AI Integration",
-      payment: "₦25.0M (10%)",
+      // payment: "₦25.0M (10%)",
+      payment: " (10%)",
       timing: "Phase 6",
       deliverable: "NLP engine integration and automated translation services.",
       color: "green",
     },
     {
       milestone: "Content Phase 1",
-      payment: "₦25.0M (10%)",
+      // payment: "₦25.0M (10%)",
+      payment: " (10%)",
       timing: "Phase 7",
       deliverable: "Foundation (A1) Yoruba content and audio recordings.",
       color: "orange",
     },
     {
       milestone: "Content Phase 2",
-      payment: "₦25.0M (10%)",
+      // payment: "₦25.0M (10%)",
+      payment: " (10%)",
       timing: "Phase 8",
       deliverable: "Elementary (A2) Yoruba content and cultural media.",
       color: "orange",
     },
     {
       milestone: "System Integration",
-      payment: "₦25.0M (10%)",
+      // payment: "₦25.0M (10%)",
+      payment: " (10%)",
       timing: "Phase 9",
       deliverable: "Full synchronization of apps, backend, and content CMS.",
       color: "amber",
     },
     {
       milestone: "Beta Testing & QA",
-      payment: "₦25.0M (10%)",
+      // payment: "₦25.0M (10%)",
+      payment: " (10%)",
       timing: "Phase 10",
       deliverable: "Bug fixes, performance tuning, and security audits.",
       color: "amber",
     },
     {
       milestone: "Public Launch",
-      payment: "₦12.5M (5%)",
+      // payment: "₦12.5M (5%)",
+      payment: " (5%)",
       timing: "Phase 11",
       deliverable: "App Store deployment and live production launch.",
       color: "red",
     },
     {
       milestone: "Post-Launch Ops",
-      payment: "₦12.5M (5%)",
+      // payment: "₦12.5M (5%)",
+      payment: " (5%)",
       timing: "Phase 12",
       deliverable: "User feedback iteration and 90-day stability support.",
       color: "red",
@@ -106,12 +118,19 @@ const PaymentMilestones = () => {
     <div className="space-y-12 py-16 px-4">
       {/* HEADER */}
       <div className="text-center space-y-4">
-        <h3 className="text-3xl md:text-5xl font-bold text-amber-900">
+        {/* <h3 className="text-3xl md:text-5xl font-bold text-amber-900">
           Phased Payment Schedule
+        </h3> */}
+        <h3 className="text-3xl md:text-5xl font-bold text-amber-900">
+          Phased Schedule
         </h3>
-        <p className="text-amber-700 max-w-2xl mx-auto text-lg">
+        {/* <p className="text-amber-700 max-w-2xl mx-auto text-lg">
           A granular 12-phase investment roadmap totaling ₦250,000,000, ensuring
           transparency and delivery-based funding throughout the lifecycle.
+        </p> */}
+        <p className="text-amber-700 max-w-2xl mx-auto text-lg">
+          A granular 12-phase roadmap ensuring transparency throughout the
+          lifecycle of the project.
         </p>
       </div>
 
@@ -149,14 +168,17 @@ const PaymentMilestones = () => {
 
       {/* CUMULATIVE PROGRESS BAR */}
       <div className="max-w-5xl mx-auto bg-white rounded-[3rem] p-10 border-2 border-amber-100 shadow-sm">
-        <h4 className="font-bold text-amber-900 mb-8 text-center text-xl tracking-tight">
+        {/* <h4 className="font-bold text-amber-900 mb-8 text-center text-xl tracking-tight">
           Cumulative Investment Flow
+        </h4> */}
+        <h4 className="font-bold text-amber-900 mb-8 text-center text-xl tracking-tight">
+          Cumulative Flow
         </h4>
 
         <div className="flex items-center gap-6">
           <div className="flex flex-col items-center">
             <span className="text-xs font-black text-amber-300">START</span>
-            <span className="text-sm font-bold text-amber-600">₦0</span>
+            {/* <span className="text-sm font-bold text-amber-600">₦0</span> */}
           </div>
 
           <div className="flex-1 h-12 bg-amber-50/50 rounded-2xl p-1.5 flex shadow-inner border border-amber-100/50">
@@ -199,8 +221,9 @@ const PaymentMilestones = () => {
           </div>
 
           <div className="flex flex-col items-center">
-            <span className="text-xs font-black text-amber-300">TOTAL</span>
-            <span className="text-sm font-black text-amber-900">₦250M</span>
+            <span className="text-xs font-black text-amber-300">END</span>
+            {/* <span className="text-xs font-black text-amber-300">TOTAL</span> */}
+            {/* <span className="text-sm font-black text-amber-900">₦250M</span> */}
           </div>
         </div>
 

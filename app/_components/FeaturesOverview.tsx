@@ -14,7 +14,155 @@ import {
   Users,
   Volume2,
   Wifi,
+  XCircle,
 } from "lucide-react";
+
+const PricingTiers = () => {
+  const tiers = [
+    {
+      name: "Free",
+      price: "$0",
+      description: "Basic cultural entry",
+      features: [
+        { text: "Core A1-A2 Lessons", included: true },
+        { text: "Daily Vocabulary Drills", included: true },
+        { text: "Community Access", included: true },
+        { text: "AI Conversations", included: false },
+        { text: "Offline Mode", included: false },
+        { text: "Official Certification", included: false },
+      ],
+      cta: "Get Started",
+      style: "bg-white border-amber-100",
+      buttonStyle: "bg-amber-100 text-amber-900 hover:bg-amber-200",
+    },
+    {
+      name: "Individual Pro",
+      price: "$9",
+      description: "Personal mastery suite",
+      popular: true,
+      features: [
+        { text: "All Core Lessons", included: true },
+        { text: "Unlimited AI Tutor Access", included: true },
+        { text: "Offline Downloads", included: true },
+        { text: "Advanced C1-C2 Content", included: true },
+        { text: "Progress Analytics", included: true },
+        { text: "Official Certification", included: true },
+      ],
+      cta: "Start 7-Day Trial",
+      style: "bg-white border-purple-200 ring-2 ring-purple-500 ring-offset-2",
+      buttonStyle:
+        "bg-purple-600 text-white hover:bg-purple-700 shadow-lg shadow-purple-200",
+    },
+    {
+      name: "Family / Group",
+      price: "$45",
+      description: "For up to 5 members",
+      features: [
+        { text: "Everything in Pro", included: true },
+        { text: "5 Independent Accounts", included: true },
+        { text: "Shared Group Leaderboards", included: true },
+        { text: "Priority Support", included: true },
+        { text: "Cultural Webinar Access", included: true },
+        { text: "Institutional Dashboard", included: false },
+      ],
+      cta: "Enroll Family",
+      style: "bg-white border-amber-100",
+      buttonStyle: "bg-amber-900 text-white hover:bg-black",
+    },
+    {
+      name: "Institutional",
+      price: "Custom",
+      description: "Schools & Corporations",
+      features: [
+        { text: "Bulk User Licensing", included: true },
+        { text: "LMS Integration", included: true },
+        { text: "Admin Oversight Tools", included: true },
+        { text: "Dedicated Success Manager", included: true },
+        { text: "Custom Curriculum Path", included: true },
+        { text: "Whitelabel Options", included: true },
+      ],
+      cta: "Contact Sales",
+      style: "bg-amber-50 border-amber-200",
+      buttonStyle: "bg-amber-600 text-white hover:bg-amber-700",
+    },
+  ];
+
+  return (
+    <section className="max-w-7xl mx-auto px-6 py-24">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
+          Choose Your Path to Fluency
+        </h2>
+        <p className="text-lg text-amber-800/70 max-w-2xl mx-auto">
+          From casual learners to institutions building cultural bridges, we
+          have a plan designed to scale with your ambition.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {tiers.map((tier, idx) => (
+          <div
+            key={idx}
+            className={`relative flex flex-col p-8 rounded-[2.5rem] border-2 transition-all duration-300 hover:-translate-y-2 ${tier.style}`}
+          >
+            {tier.popular && (
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                Most Popular
+              </div>
+            )}
+
+            <div className="mb-8">
+              <h3 className="text-xl font-black text-amber-900 uppercase tracking-tighter mb-1">
+                {tier.name}
+              </h3>
+              <p className="text-sm text-amber-700/60 font-medium mb-6">
+                {tier.description}
+              </p>
+              <div className="flex items-baseline gap-1">
+                <span className="text-4xl font-black text-amber-900 tracking-tighter">
+                  {tier.price}
+                </span>
+                {tier.price !== "Custom" && (
+                  <span className="text-amber-700/50 text-sm font-bold">
+                    /mo
+                  </span>
+                )}
+              </div>
+            </div>
+
+            <ul className="flex-1 space-y-4 mb-8">
+              {tier.features.map((feature, fIdx) => (
+                <li key={fIdx} className="flex items-start gap-3">
+                  {feature.included ? (
+                    <CheckCircle className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                  ) : (
+                    <XCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                  )}
+                  <span
+                    className={`text-sm font-medium ${feature.included ? "text-amber-900" : "text-amber-500"}`}
+                  >
+                    {feature.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <button
+              className={`w-full py-4 rounded-2xl font-bold text-sm transition-all duration-300 ${tier.buttonStyle}`}
+            >
+              {tier.cta}
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-16 text-center text-amber-700/70 text-xs font-medium">
+        All plans include 7-day free trial • Cancel anytime • 256-bit Secure
+        Encryption
+      </div>
+    </section>
+  );
+};
 
 const FeaturesOverview = () => {
   return (
@@ -364,89 +512,7 @@ const FeaturesOverview = () => {
       </div>
 
       {/* Premium Features */}
-      <div className="mb-16">
-        <h3 className="text-3xl font-bold text-amber-900 mb-8">
-          Premium Subscription Features
-        </h3>
-        <div className="bg-linear-to-br from-purple-50 to-purple-100 rounded-xl p-8 border-2 border-purple-200">
-          <div className="text-center mb-8">
-            <div className="text-4xl font-bold text-purple-900 mb-2">
-              $9.99/month
-            </div>
-            <div className="text-purple-700">
-              Cancel anytime • 7-day free trial
-            </div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              {[
-                {
-                  feature: "Unlimited AI Conversations",
-                  desc: "Practice with AI partner 24/7",
-                },
-                {
-                  feature: "Unlimited Hearts",
-                  desc: "Learn without limits",
-                },
-                {
-                  feature: "Ad-Free Experience",
-                  desc: "No distractions, just learning",
-                },
-                {
-                  feature: "Priority Support",
-                  desc: "Response within 24 hours",
-                },
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-start gap-3 bg-white rounded-lg p-4 border border-purple-200"
-                >
-                  <CheckCircle className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
-                  <div>
-                    <div className="font-bold text-purple-900">
-                      {item.feature}
-                    </div>
-                    <div className="text-sm text-purple-700">{item.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-4">
-              {[
-                {
-                  feature: "Offline Downloads",
-                  desc: "Unlimited lesson downloads",
-                },
-                {
-                  feature: "Progress Insights",
-                  desc: "Detailed analytics and reports",
-                },
-                {
-                  feature: "Advanced Lessons",
-                  desc: "Access to C1-C2 content early",
-                },
-                {
-                  feature: "Certificate of Completion",
-                  desc: "Official certification per level",
-                },
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-start gap-3 bg-white rounded-lg p-4 border border-purple-200"
-                >
-                  <CheckCircle className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
-                  <div>
-                    <div className="font-bold text-purple-900">
-                      {item.feature}
-                    </div>
-                    <div className="text-sm text-purple-700">{item.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+      <PricingTiers />
 
       {/* Accessibility Features */}
       <div>

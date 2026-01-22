@@ -22,34 +22,46 @@ const InvestmentProposition = () => {
       {/* Investment Overview */}
       <div className="grid md:grid-cols-2 gap-12 mb-16">
         <div className="bg-linear-to-br from-amber-900 to-orange-900 rounded-3xl p-10 text-white shadow-xl">
-          <h3 className="text-3xl font-bold mb-6">Total Investment</h3>
-          <div className="text-5xl font-black mb-6 tracking-tighter">
+          {/* <h3 className="text-3xl font-bold mb-6">Total Investment</h3> */}
+          {/* <div className="text-5xl font-black mb-6 tracking-tighter">
             250 Million Naira
-          </div>
-          <p className="text-amber-100 mb-8 leading-relaxed opacity-90">
+          </div> */}
+          {/* <p className="text-amber-100 mb-8 leading-relaxed opacity-90">
             Comprehensive budget covering 10 months of development, content
             creation, AI training, and launch.
+          </p> */}
+          <h3 className="text-5xl font-black tracking-tighter mb-8 leading-relaxed opacity-90">
+            10 months of development
+          </h3>
+          <p className="text-2xl text-amber-100 mb-8 leading-relaxed opacity-90">
+            Comprehensive 10 months of development, content creation, AI
+            training, and launch.
           </p>
           <div className="space-y-4">
             <div className="flex justify-between items-center pb-3 border-b border-amber-700/50">
               <span className="text-amber-200">Development</span>
-              <span className="font-bold">₦87.5M (35%)</span>
+              {/* <span className="font-bold">₦87.5M (35%)</span> */}
+              <span className="font-bold">35%</span>
             </div>
             <div className="flex justify-between items-center pb-3 border-b border-amber-700/50">
               <span className="text-amber-200">AI & ML</span>
-              <span className="font-bold">₦27.5M (11%)</span>
+              {/* <span className="font-bold">₦27.5M (11%)</span> */}
+              <span className="font-bold">11%</span>
             </div>
             <div className="flex justify-between items-center pb-3 border-b border-amber-700/50">
               <span className="text-amber-200">Content Creation</span>
-              <span className="font-bold">₦30.0M (12%)</span>
+              {/* <span className="font-bold">₦30.0M (12%)</span> */}
+              <span className="font-bold">12%</span>
             </div>
             <div className="flex justify-between items-center pb-3 border-b border-amber-700/50">
               <span className="text-amber-200">Infrastructure</span>
-              <span className="font-bold">₦22.5M (9%)</span>
+              {/* <span className="font-bold">₦22.5M (9%)</span> */}
+              <span className="font-bold">9%</span>
             </div>
             <div className="flex justify-between items-center pb-3 border-b border-amber-700/50">
               <span className="text-amber-200">Operational Reserves</span>
-              <span className="font-bold">₦82.5M (33%)</span>
+              {/* <span className="font-bold">₦82.5M (33%)</span> */}
+              <span className="font-bold">33%</span>
             </div>
           </div>
         </div>
@@ -76,15 +88,15 @@ const InvestmentProposition = () => {
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-blue-500 shrink-0" />
                 <span>
-                  <strong className="text-blue-900">Premium:</strong>{" "}
-                  ₦15,000/month (Unlimited AI, offline access, ad-free).
+                  <strong className="text-blue-900">Premium:</strong> $9/month
+                  (Unlimited AI, offline access, ad-free).
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-blue-500 shrink-0" />
                 <span>
                   <strong className="text-blue-900">Family Plan:</strong>{" "}
-                  ₦30,000/month for up to 5 users.
+                  $45/month for up to 5 users.
                 </span>
               </li>
               <li className="flex items-start gap-3">
